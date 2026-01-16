@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EyeCo — Site blocked</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { margin:0; padding:0; height:100vh; display:flex; align-items:center; justify-content:center; background:#111; color:#fff; font-family:Arial, sans-serif; }
+    .card { width:90%; max-width:920px; background:#1b1b1c; padding:28px; border-radius:12px; box-shadow:0 12px 36px rgba(0,0,0,0.6); text-align:center; }
+    .logo { width:84px; height:84px; border-radius:12px; background:#222; margin:0 auto 18px; }
+    .warning-text { color:#ff3333; font-size:40px; font-weight:800; text-shadow:2px 2px 10px rgba(0,0,0,0.6); margin-bottom:12px; }
+    .info-text { color:#dcdcdc; font-size:18px; margin-bottom:20px; }
+    .meta { color:#9aa0a6; font-size:13px; margin-bottom:18px; }
+    .btn { padding:12px 18px; margin:6px; border-radius:8px; border:0; cursor:pointer; font-weight:700; }
+    .btn-allow { background:#2f8b3f; color:#fff; }
+    .btn-close { background:#6b6f73; color:#fff; }
+    @media(max-width:600px){ .warning-text{ font-size:26px } .info-text{ font-size:15px } }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo"></div>
+    <div class="warning-text">⚠️ Possible Malicious Site Found ⚠️</div>
+    <div id="hostLabel" class="meta"></div>
+    <div id="msg" class="info-text">Sorry, but this site might be malicious. You can stop this from happening by unblocking the website below.</div>
+    <div>
+      <button id="allowBtn" class="btn btn-allow">Unblock site and reopen</button>
+      <button id="dismissBtn" class="btn btn-close">Dismiss</button>
+    </div>
+    <div class="meta" style="margin-top:12px">EyeCo Elite — closed the original tab and opened this notice.</div>
+  </div>
+
+  <script src="warning.js"></script>
+</body>
+</html>
